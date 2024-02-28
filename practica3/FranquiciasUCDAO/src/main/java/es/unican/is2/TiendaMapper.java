@@ -1,7 +1,10 @@
-
+package es.unican.is2;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
+import es.unican.is2.clases.DataAccessException;
+import es.unican.is2.clases.Tienda;
 
 /**
  * Clase de utilidad que mapea filas de la base de datos a objetos 

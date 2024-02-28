@@ -1,4 +1,4 @@
-
+package es.unican.is2;
 
 /**
  * Clase principal que construye la aplicaci�n de tres capas y lanza su ejecuci�n

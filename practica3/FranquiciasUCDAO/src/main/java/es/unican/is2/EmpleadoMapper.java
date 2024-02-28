@@ -1,7 +1,11 @@
-
+package es.unican.is2;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
+import es.unican.is2.clases.Categoria;
+import es.unican.is2.clases.DataAccessException;
+import es.unican.is2.clases.Empleado;
 
 /**
  * Clase de utilidad que mapea filas de la base de datos a objetos 
@@ -10,7 +14,7 @@ import java.sql.SQLException;
 public class EmpleadoMapper {
 
 	/**
-	 * Método privado de apoyo. Recibe un ResultSet de un empleado
+	 * Mï¿½todo privado de apoyo. Recibe un ResultSet de un empleado
 	 * y devuelve un objeto Empleado con los datos del ResultSet
 	 * @param results Fila resultado de una consulta en base de datos
 	 * @return Empleado

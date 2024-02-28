@@ -1,4 +1,8 @@
+package es.unican.is2.IGestion;
 
+import es.unican.is2.clases.DataAccessException;
+import es.unican.is2.clases.Empleado;
+import es.unican.is2.clases.OperacionNoValidaException;
 
 /**
  * Interfaz de negocio para gestionar empleados
@@ -6,10 +10,10 @@
 public interface IGestionEmpleados {
 
 	/**
-	 * Añade un nuevo empleado a una tienda
-	 * @param e Empleado que se quiere añadir
+	 * Aï¿½ade un nuevo empleado a una tienda
+	 * @param e Empleado que se quiere aï¿½adir
 	 * @param nombre Nombre de la tienda
-	 * @return El empleado añadido 
+	 * @return El empleado aï¿½adido 
 	 *         null si no se anhade porque no existe la tienda
 	 * @throws OperacionNoValidaException Si el empleado ya existe
 	 * @throws DataAccessException Si hay un error en el acceso a los datos

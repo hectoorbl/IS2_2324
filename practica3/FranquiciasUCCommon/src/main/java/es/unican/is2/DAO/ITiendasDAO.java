@@ -1,6 +1,11 @@
+package es.unican.is2.DAO;
+
 
 
 import java.util.List;
+
+import es.unican.is2.clases.DataAccessException;
+import es.unican.is2.clases.Tienda;
 /**
  * Interfaz DAO para tiendas
  */
@@ -16,7 +21,7 @@ public interface ITiendasDAO {
 	public Tienda crearTienda(Tienda t) throws DataAccessException;
 
 	/**
-	 * Retorna la tienda cuyo id se pasa por parámetro
+	 * Retorna la tienda cuyo id se pasa por parï¿½metro
 	 * @param id Id de la tienda
 	 * @return La tienda buscada 
 	 *         null si no se encuentra
@@ -25,7 +30,7 @@ public interface ITiendasDAO {
 	public Tienda tienda(long id) throws DataAccessException;
 
 	/**
-	 * Retorna la tienda cuyo nombre se pasa por parámetro
+	 * Retorna la tienda cuyo nombre se pasa por parï¿½metro
 	 * @param nombre Nombre de la tienda
 	 * @return La tienda buscada 
 	 *         null si no se encuentra

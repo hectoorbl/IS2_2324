@@ -1,6 +1,11 @@
+package es.unican.is2.DAO;
+
 
 
 import java.util.List;
+
+import es.unican.is2.clases.DataAccessException;
+import es.unican.is2.clases.Empleado;
 
 /**
  * Interfaz DAO para Empleados

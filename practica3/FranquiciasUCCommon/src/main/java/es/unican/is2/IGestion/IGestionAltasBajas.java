@@ -1,8 +1,9 @@
+package es.unican.is2.IGestion;
 
-
+import es.unican.is2.clases.DataAccessException;
 
 /**
- * Interfaz de negocio para la gestión de altas y bajas medicas
+ * Interfaz de negocio para la gestiï¿½n de altas y bajas medicas
  */
 public interface IGestionAltasBajas {
 

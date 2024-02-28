@@ -1,9 +1,11 @@
-
+package es.unican.is2;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
+
+import es.unican.is2.clases.DataAccessException;
 
 
 /**
@@ -63,11 +65,11 @@ public class H2ServerConnectionManager {
 			stm.execute(sql); 		
 			
 			// Inicializa tiendas
-			sql = "INSERT INTO Tienda (nombre, direccion) VALUES ('Tienda A', 'Dirección A')"; 
+			sql = "INSERT INTO Tienda (nombre, direccion) VALUES ('Tienda A', 'Direcciï¿½n A')"; 
 			stm.executeUpdate(sql);
-			sql = "INSERT INTO Tienda (nombre, direccion) VALUES ('Tienda B', 'Dirección B')"; 
+			sql = "INSERT INTO Tienda (nombre, direccion) VALUES ('Tienda B', 'Direcciï¿½n B')"; 
 			stm.executeUpdate(sql);
-			sql = "INSERT INTO Tienda (nombre, direccion) VALUES ('Tienda C', 'Dirección C')"; 
+			sql = "INSERT INTO Tienda (nombre, direccion) VALUES ('Tienda C', 'Direcciï¿½n C')"; 
 			stm.executeUpdate(sql);
 			
 			// Inicializa empleados
@@ -78,10 +80,10 @@ public class H2ServerConnectionManager {
 					+ "VALUES ('11111111B', '2016-05-20', TRUE, 'Maria Rodriguez', 'VENDEDOR', 1)";
 			stm.executeUpdate(sql);			
 			sql = "INSERT INTO Empleado (dni, fechaContratacion, baja, nombre, categoria, idTienda) "
-					+ "VALUES ('1111111C', '2022-05-21', FALSE, 'Luis Martínez', 'AUXILIAR', 1)";
+					+ "VALUES ('1111111C', '2022-05-21', FALSE, 'Luis Martï¿½nez', 'AUXILIAR', 1)";
 			stm.executeUpdate(sql);
 			sql = "INSERT INTO Empleado (dni, fechaContratacion, baja, nombre, categoria, idTienda) "
-					+ "VALUES ('1111111D', '2010-06-01', FALSE, 'Lucía Ibáñez', 'ENCARGADO', 2)";
+					+ "VALUES ('1111111D', '2010-06-01', FALSE, 'Lucï¿½a Ibï¿½ï¿½ez', 'ENCARGADO', 2)";
 			stm.executeUpdate(sql);
 			
 			// Cierra el statement

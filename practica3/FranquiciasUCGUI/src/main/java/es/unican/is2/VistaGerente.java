@@ -1,4 +1,4 @@
-
+package es.unican.is2;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -14,6 +14,13 @@ import java.awt.event.ActionEvent;
 import javax.swing.JList;
 
 import javax.swing.border.LineBorder;
+
+import es.unican.is2.IGestion.IGestionEmpleados;
+import es.unican.is2.IGestion.IGestionTiendas;
+import es.unican.is2.clases.DataAccessException;
+import es.unican.is2.clases.Empleado;
+import es.unican.is2.clases.Tienda;
+
 import java.awt.Color;
 import javax.swing.JButton;
 
