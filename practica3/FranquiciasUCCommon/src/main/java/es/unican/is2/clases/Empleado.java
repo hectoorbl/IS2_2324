@@ -27,10 +27,22 @@ public class Empleado {
 	 * @param categoria
 	 * @param fechaContratacion
 	 */
-	public Empleado(String DNI, String nombre, Categoria categoria, LocalDate fechaContratacion) {
+	public Empleado(String DNI, String nombre, Categoria categoria, LocalDate fechaContratacion)throws DatoNoValido {
+		if (nombre == null || nombre.isBlank()) {
+			throw new DatoNoValido();
+		}
 		this.nombre = nombre;
+		if (DNI == null || DNI.isBlank()) {
+			throw new DatoNoValido();
+		}
 		this.DNI=DNI;
+		if (categoria == null) {
+			throw new DatoNoValido();
+		}
 		this.categoria=categoria;
+		if (fechaContratacion.isAfter(LocalDate.now())) {
+			throw new DatoNoValido();
+		}
 		this.fechaContratacion=fechaContratacion;
 	}
 	
@@ -58,11 +70,11 @@ public class Empleado {
 		}
 		int complemento;
 		long antiguedad = ChronoUnit.YEARS.between(fechaContratacion, LocalDate.now());
-        if (antiguedad >= 5 && antiguedad < 10) {
+        if (antiguedad > 5 && antiguedad <= 10) {
         	complemento = 50;
-        } else if (antiguedad >= 10 && antiguedad < 20) {
+        } else if (antiguedad > 10 && antiguedad <= 20) {
         	complemento = 100;
-        } else if (antiguedad >= 20) {
+        } else if (antiguedad > 20) {
         	complemento = 200;
         } else {
         	complemento = 0;

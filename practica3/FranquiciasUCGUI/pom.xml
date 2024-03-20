@@ -5,10 +5,22 @@
   <version>0.0.1-SNAPSHOT</version>
   
   <dependencies>
-  	<dependency>
-  		<groupId>es.unican.is2</groupId>
-  		<artifactId>FranquiciasUCCommon</artifactId>
-  		<version>0.0.1-SNAPSHOT</version>
-  	</dependency>
+  		<dependency>
+	  		<groupId>es.unican.is2</groupId>
+	  		<artifactId>FranquiciasUCCommon</artifactId>
+	  		<version>0.0.1-SNAPSHOT</version>
+  		</dependency>
+  		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter</artifactId>
+			<version>5.9.2</version>
+			<scope>test</scope>
+		</dependency>
+  		<dependency>
+			<groupId>org.easytesting</groupId>
+			<artifactId>fest-swing</artifactId>
+			<version>1.2.1</version>
+			<scope>test</scope>
+		</dependency>
   </dependencies>
 </project>
