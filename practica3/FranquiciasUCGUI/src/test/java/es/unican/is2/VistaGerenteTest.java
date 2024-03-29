@@ -1,7 +1,5 @@
 package es.unican.is2;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import org.fest.swing.fixture.FrameFixture;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -12,7 +10,11 @@ class VistaGerenteTest {
 
 	@BeforeEach
 	public void setUp() {
-		EjemploFEST gui = new EjemploFEST();
+		TiendasDAO tiendasDAO = new TiendasDAO();
+		EmpleadosDAO empleadosDAO = new EmpleadosDAO();
+		GestionTiendas gTiendas = new GestionTiendas(tiendasDAO);
+		GestionEmpleados gEmpleados = new GestionEmpleados(tiendasDAO, empleadosDAO);
+		VistaGerente gui = new VistaGerente(gTiendas, gEmpleados);
 		demo = new FrameFixture(gui);
 		gui.setVisible(true);	
 	}
@@ -24,27 +26,21 @@ class VistaGerenteTest {
 	
 	@Test
 	public void test() {
-		// Comprobamos que la interfaz tiene el aspecto deseado
-		demo.button("btnPulsar").requireText("ˇPulsa!");
+		demo.button("btnBuscar").requireText("Buscar");
+
 		
-		//  Prueba de saludo con nombre
-		// Escribimos un nombre
-		demo.textBox("txtNombre").enterText("Patri");
-		// Pulsamos el botón
-		demo.button("btnPulsar").click();		
-		// Comprobamos la salida
-		demo.textBox("txtSaludo").requireText("ˇHola Patri!");
+		demo.textBox("Nombre Tienda").enterText("Tienda A");
+		demo.button("btnPulsar").click();	
+		demo.textBox("Direccion").requireText("Dirección A");
 		
-		// Prueba de saludo sin nombre
-		demo.textBox("txtNombre").setText("");
-		demo.button("btnPulsar").click();
-		demo.textBox("txtSaludo").requireText("ˇHola!");
+		demo.textBox("Nombre Tienda").enterText("Tienda");
+		demo.button("btnPulsar").click();	
+		demo.textBox("Direccion").requireText("Tienda No Existe");
 		
 		// Sleep para visualizar como se realiza el test
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

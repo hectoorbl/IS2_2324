@@ -65,11 +65,11 @@ public class H2ServerConnectionManager {
 			stm.execute(sql); 		
 			
 			// Inicializa tiendas
-			sql = "INSERT INTO Tienda (nombre, direccion) VALUES ('Tienda A', 'Direcci�n A')"; 
+			sql = "INSERT INTO Tienda (nombre, direccion) VALUES ('Tienda A', 'Dirección A')"; 
 			stm.executeUpdate(sql);
-			sql = "INSERT INTO Tienda (nombre, direccion) VALUES ('Tienda B', 'Direcci�n B')"; 
+			sql = "INSERT INTO Tienda (nombre, direccion) VALUES ('Tienda B', 'Dirección B')"; 
 			stm.executeUpdate(sql);
-			sql = "INSERT INTO Tienda (nombre, direccion) VALUES ('Tienda C', 'Direcci�n C')"; 
+			sql = "INSERT INTO Tienda (nombre, direccion) VALUES ('Tienda C', 'Dirección C')"; 
 			stm.executeUpdate(sql);
 			
 			// Inicializa empleados
@@ -80,10 +80,10 @@ public class H2ServerConnectionManager {
 					+ "VALUES ('11111111B', '2016-05-20', TRUE, 'Maria Rodriguez', 'VENDEDOR', 1)";
 			stm.executeUpdate(sql);			
 			sql = "INSERT INTO Empleado (dni, fechaContratacion, baja, nombre, categoria, idTienda) "
-					+ "VALUES ('1111111C', '2022-05-21', FALSE, 'Luis Mart�nez', 'AUXILIAR', 1)";
+					+ "VALUES ('1111111C', '2022-05-21', FALSE, 'Luis Martínez', 'AUXILIAR', 1)";
 			stm.executeUpdate(sql);
 			sql = "INSERT INTO Empleado (dni, fechaContratacion, baja, nombre, categoria, idTienda) "
-					+ "VALUES ('1111111D', '2010-06-01', FALSE, 'Luc�a Ib��ez', 'ENCARGADO', 2)";
+					+ "VALUES ('1111111D', '2010-06-01', FALSE, 'Lucía Ibañez', 'ENCARGADO', 2)";
 			stm.executeUpdate(sql);
 			
 			// Cierra el statement
