@@ -98,7 +98,7 @@ public class VistaGerente extends JFrame {
 		txtNombreTienda.setBounds(10, 51, 113, 20);
 		contentPane.add(txtNombreTienda);
 		txtNombreTienda.setColumns(10);
-		txtNombreTienda.setName("txtDatosTienda");
+		txtNombreTienda.setName("txtNombreTienda");
 
 		JLabel lblNombreTienda = new JLabel("Nombre Tienda");
 		lblNombreTienda.setBounds(21, 27, 139, 14);

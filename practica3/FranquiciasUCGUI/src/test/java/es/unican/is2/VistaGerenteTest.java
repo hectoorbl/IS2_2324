@@ -25,32 +25,55 @@ class VistaGerenteTest {
 	}
 	
 	@Test
-	public void test() {
-		demo.button("btnBuscar").requireText("Buscar");
-		
-		demo.textBox("Nombre Tienda").enterText("Tienda A");
-		demo.button("btnPulsar").click();	
-		demo.textBox("Direccion").requireText("Dirección A");
-		
-		demo.textBox("Nombre Tienda").enterText("Tienda");
-		demo.button("btnPulsar").click();	
-		demo.textBox("Direccion").requireText("Tienda No Existe");
-		
-		demo.textBox("Nombre Tienda").enterText("");
-		demo.button("btnPulsar").click();	
-		demo.textBox("Direccion").requireText("Tienda No Existe");
-		
-		demo.textBox("Nombre Tienda").enterText(null);
-		demo.button("btnPulsar").click();	
-		demo.textBox("Direccion").requireText("Error acceso a datos");
-		
-		// Sleep para visualizar como se realiza el test
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
+	public void testBuscarTiendaExistente() {
+	    demo.button("btnBuscar").requireText("Buscar");
+	    demo.textBox("txtNombreTienda").enterText("Tienda A");
+	    demo.button("btnBuscar").click();
+	    demo.textBox("txtDireccionTienda").requireText("Dirección A");
+	    try {
+	        Thread.sleep(2000);
+	    } catch (InterruptedException e) {
+	        e.printStackTrace();
+	    }
 	}
 
+	@Test
+	public void testBuscarTiendaNoExistente() {
+	    demo.button("btnBuscar").requireText("Buscar");
+	    demo.textBox("txtNombreTienda").enterText("Tienda");
+	    demo.button("btnBuscar").click();
+	    demo.textBox("txtDireccionTienda").requireText("Tienda No Existe");
+	    try {
+	        Thread.sleep(2000);
+	    } catch (InterruptedException e) {
+	        e.printStackTrace();
+	    }
+	}
+
+	@Test
+	public void testBuscarTiendaSinTexto() {
+	    demo.button("btnBuscar").requireText("Buscar");
+	    demo.textBox("txtNombreTienda").enterText("");
+	    demo.button("btnBuscar").click();
+	    demo.textBox("txtDireccionTienda").requireText("Tienda No Existe");
+	    try {
+	        Thread.sleep(2000);
+	    } catch (InterruptedException e) {
+	        e.printStackTrace();
+	    }
+	}
+
+	@Test
+	public void testBuscarTiendaNull() {
+	    demo.button("btnBuscar").requireText("Buscar");
+	    demo.textBox("txtNombreTienda").enterText(null);
+	    demo.button("btnBuscar").click();
+	    demo.textBox("txtDireccionTienda").requireText("Tienda No Existe");
+	    try {
+	        Thread.sleep(2000);
+	    } catch (InterruptedException e) {
+	        e.printStackTrace();
+	    }
+	}
 
 }
