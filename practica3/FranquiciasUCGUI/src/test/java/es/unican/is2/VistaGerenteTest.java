@@ -27,7 +27,6 @@ class VistaGerenteTest {
 	@Test
 	public void test() {
 		demo.button("btnBuscar").requireText("Buscar");
-
 		
 		demo.textBox("Nombre Tienda").enterText("Tienda A");
 		demo.button("btnPulsar").click();	
@@ -36,6 +35,14 @@ class VistaGerenteTest {
 		demo.textBox("Nombre Tienda").enterText("Tienda");
 		demo.button("btnPulsar").click();	
 		demo.textBox("Direccion").requireText("Tienda No Existe");
+		
+		demo.textBox("Nombre Tienda").enterText("");
+		demo.button("btnPulsar").click();	
+		demo.textBox("Direccion").requireText("Tienda No Existe");
+		
+		demo.textBox("Nombre Tienda").enterText(null);
+		demo.button("btnPulsar").click();	
+		demo.textBox("Direccion").requireText("Error acceso a datos");
 		
 		// Sleep para visualizar como se realiza el test
 		try {
