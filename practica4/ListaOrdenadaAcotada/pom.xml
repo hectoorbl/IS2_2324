@@ -12,7 +12,11 @@
 		<version>5.9.2</version>
 		<scope>test</scope>
 	</dependency>
+	<dependency>
+	  	<groupId>es.unican.is2</groupId>
+	  	<artifactId>ListaOrdenadaAcotada</artifactId>
+	  	<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
  </dependencies>
-  
-  
+ 
 </project>
