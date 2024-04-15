@@ -56,9 +56,9 @@ public class ListaOrdenadaAcotadaTest {
 
     @Test
     public void testRemove() {
-    	assertEquals(2, listaLlena.remove(1));
+    	assertEquals(1, listaLlena.remove(0));
         assertEquals(1, listaLlena.size());
-        assertEquals(1, listaLlena.get(0));
+        assertEquals(2, listaLlena.get(0));
         
         assertEquals(2, listaElem.remove(0));
         assertEquals(0, listaElem.size());
