@@ -3,7 +3,6 @@ package es.unican.is2.listaOrdenadaAcotada;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.*;
 
-import es.unican.is2.listaOrdenadaAcotada.ListaOrdenadaAcotada;
 
 public class ListaOrdenadaAcotadaTest {
     ListaOrdenadaAcotada<Integer> listaLlena;
