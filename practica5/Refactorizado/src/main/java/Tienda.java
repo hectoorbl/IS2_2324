@@ -113,7 +113,7 @@ public class Tienda {
 	 * @param id Id del vendedor
 	 * @return vendedor con ese dni o null si no existe ninguno
 	 */
-	public Vendedor buscaVendedor(String id) throws DataAccessException {	//WMC 9	//CCOG 10
+	public Vendedor buscaVendedor(String id) throws DataAccessException {	//WMC 5	//CCOG 5
 
 		lista = new LinkedList<Vendedor>();
 		Scanner in = null;
@@ -147,7 +147,7 @@ public class Tienda {
 	 * 
 	 * @return La lista de vendedores
 	 */
-	public List<Vendedor> vendedores() throws DataAccessException {	//WMC 8	//CCOG 8
+	public List<Vendedor> vendedores() throws DataAccessException {	//WMC 3	//CCOG 2
 		lista = new LinkedList<Vendedor>();
 
 		Scanner in = null;
@@ -159,8 +159,6 @@ public class Tienda {
 			nombre = in.nextLine();
 			direccion = in.nextLine();
 			in.next();
-			// lee los vendedores senior
-			// lee los vendedores senior
 			leerVendedores(in);
 		} catch (FileNotFoundException e) {	//+1	//+1
 			throw new DataAccessException();
@@ -174,7 +172,7 @@ public class Tienda {
 
 	}
 
-	private void leerVendedores(Scanner in) {
+	private void leerVendedores(Scanner in) {	//WMC 6	//CCOG 5
 		Vendedor ven;
 		while (in.hasNext() && !in.next().equals("Junior")) {	//+2	//+2
 			String nombre = in.next();

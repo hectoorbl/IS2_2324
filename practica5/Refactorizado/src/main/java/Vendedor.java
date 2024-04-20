@@ -38,7 +38,7 @@ public abstract class Vendedor {
 	 * Retorna el dni del vendedor
 	 * @return id
 	 */
-	public String getDni() {
+	public String getDni() {	//WMC 1	//CCOG 0
 		return dni;
 	}
 	
