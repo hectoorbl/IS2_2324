@@ -1,7 +1,6 @@
 public class VendedorEnPlantilla extends Vendedor {
 	
 	private TipoVendedor tipo;
-	private String dni;
 	
 	/**
 	 * Retorna un nuevo vendedor en plantilla del tipo que se indica
@@ -10,24 +9,20 @@ public class VendedorEnPlantilla extends Vendedor {
 	 * @param tipo
 	 */
 	public VendedorEnPlantilla(String nombre, String id, String dni, TipoVendedor tipo) {	//WMC 1	//CCOG 0
-		super(nombre, id);
+		super(nombre, id, dni);
 		this.tipo = tipo;
-		this.dni=dni;
 	}
 	
 	public TipoVendedor tipo() {	//WMC 1	//CCOG 0
 		return tipo;
 	}
 	
-	public String dni() {	//WMC 1	//CCOG 0
-		return dni;
-	}
-	
+
 	@Override
 	public boolean equals(Object obj) {	//WMC 3	//CCOG 3
 		if (!(obj instanceof VendedorEnPlantilla))	//+1	//+1
 			return false;
 		VendedorEnPlantilla v = (VendedorEnPlantilla) obj;
-		return (v.getId().equals(getId()) && v.dni().equals(dni()));//+2	//+2
+		return (v.getId().equals(getId()) && v.getDni().equals(getDni()));	//+2	//+2
 	}
 }

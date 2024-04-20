@@ -7,14 +7,17 @@ public abstract class Vendedor {
 	
 	private String id;
 	private String nombre;
-	private double c;
+	private String dni;
+	private double comision;
 	private double totalVentas;
+
 	
-	public Vendedor(String nombre, String id) {	//WMC 1	//CCOG 0
+	public Vendedor(String nombre, String id, String dni) {	//WMC 1	//CCOG 0
 		this.nombre = nombre;
 		this.id = id;
+		this.dni=dni;
 	}
-	
+
 	/**
 	 * Retorna el nombre del vendedor
 	 * @return nombre
@@ -32,19 +35,27 @@ public abstract class Vendedor {
 	}
 	
 	/**
+	 * Retorna el dni del vendedor
+	 * @return id
+	 */
+	public String getDni() {
+		return dni;
+	}
+	
+	/**
 	 * Retorna la comision mensual acumulada
 	 * @return Comision total acumulada
 	 */
-	public double getC() {	//WMC 1	//CCOG 0
-		return c;
+	public double getComision() {	//WMC 1	//CCOG 0
+		return comision;
 	}
 	
 	/**
 	 * Asigna valor a la comision mensual acumulada
 	 * @param value comision a asignar
 	 */
-	public void setC(double value) {	//WMC 1	//CCOG 0
-		this.c = value;
+	public void setComision(double value) {	//WMC 1	//CCOG 0
+		this.comision = value;
 	}
 	
 	/**
