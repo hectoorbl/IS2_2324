@@ -3,10 +3,8 @@
   <groupId>es.unican.is2</groupId>
   <artifactId>NoRefactorizado</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-<<<<<<< HEAD
-=======
+
   <name>NoRefactorizado</name>
-  
   <dependencies>
   	<dependency>
 		<groupId>org.junit.jupiter</groupId>
@@ -20,6 +18,4 @@
 	  	<version>0.0.1-SNAPSHOT</version>
   	</dependency>
  </dependencies>
-  
->>>>>>> practica5
 </project>

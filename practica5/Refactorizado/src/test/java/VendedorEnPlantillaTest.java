@@ -24,7 +24,7 @@ public class VendedorEnPlantillaTest {
 	@Test
 	public void testConstructor() {
 		assertEquals(sutJunior.getId(), "1");
-		assertEquals(sutJunior.dni(), "11111111A");
+		assertEquals(sutJunior.getDni(), "11111111A");
 		assertEquals(sutJunior.getNombre(), "Ana");
 		assertTrue(sutJunior.getTotalVentas()==0.0);
 		assertTrue(sutJunior.getComision()==0.0);
