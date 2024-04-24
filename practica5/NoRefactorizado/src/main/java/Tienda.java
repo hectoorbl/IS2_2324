@@ -279,7 +279,7 @@ public class Tienda {
 				VendedorEnPlantilla vp = (VendedorEnPlantilla) v;
 				if (vp.tipo().equals(TipoVendedor.Junior))	//+1	//+3
 					junior.add(vp);
-				else	//+1
+				else	//0	//+1
 					senior.add(vp);
 			}
 		}
