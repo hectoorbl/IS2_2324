@@ -111,7 +111,7 @@ public class Tienda {
 	 * @param id Id del vendedor
 	 * @return vendedor con ese dni o null si no existe ninguno
 	 */
-	public Vendedor buscaVendedor(String id) throws DataAccessException {	//WMC 9	//CCOG 10
+	public Vendedor buscaVendedor(String id) throws DataAccessException {	//WMC 10	//CCOG 10
 
 		lista = new LinkedList<Vendedor>();
 		Scanner in = null;

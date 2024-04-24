@@ -11,10 +11,10 @@ public class VendedorEnPracticas extends Vendedor {
 	
 
 	@Override
-	public boolean equals(Object obj) {	//WMC 3	//CCOG 3
+	public boolean equals(Object obj) {	//WMC 2	//CCOG 1
 		if (!(obj instanceof VendedorEnPracticas)) //+1	//+1
 			return false;
 		VendedorEnPracticas v = (VendedorEnPracticas) obj;
-		return (v.getId().equals(getId()) && v.getDni().equals(getDni()));	//+2	//+2
+		return (v.getId().equals(getId()) && v.getDni().equals(getDni()));
 	}
 }
