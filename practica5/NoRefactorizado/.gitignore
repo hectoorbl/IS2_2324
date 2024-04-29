@@ -6,6 +6,9 @@
 .project
 .settings/
 bin/
+<<<<<<< HEAD
 
+>>>>>>> practica5
+=======
 >>>>>>> practica5
 /target/
