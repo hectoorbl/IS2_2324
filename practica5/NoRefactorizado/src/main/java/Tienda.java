@@ -111,7 +111,7 @@ public class Tienda {
 	 * @param id Id del vendedor
 	 * @return vendedor con ese dni o null si no existe ninguno
 	 */
-	public Vendedor buscaVendedor(String id) throws DataAccessException {	//WMC 9	//CCOG 10
+	public Vendedor buscaVendedor(String id) throws DataAccessException {	//WMC 10	//CCOG 10
 
 		lista = new LinkedList<Vendedor>();
 		Scanner in = null;
@@ -279,7 +279,7 @@ public class Tienda {
 				VendedorEnPlantilla vp = (VendedorEnPlantilla) v;
 				if (vp.tipo().equals(TipoVendedor.Junior))	//+1	//+3
 					junior.add(vp);
-				else	//+1
+				else	//0	//+1
 					senior.add(vp);
 			}
 		}

@@ -16,7 +16,7 @@ public class GestionComisiones {
 	/**
 	 * Programa principal basado en menu
 	 */
-	public static void main(String[] args) { //WMC 16  //CCOG 29
+	public static void main(String[] args) { //WMC 16  //CCOG 33
 		// opciones del menu
 		final int NUEVA_VENTA = 0, VENDEDOR_DEL_MES = 1, VENDEDORES = 2;
 
@@ -81,7 +81,7 @@ public class GestionComisiones {
 					}
 					mensaje("VENDEDORES DEL MES", msj);
 
-				} catch (DataAccessException e) {	//+1	//+2
+				} catch (DataAccessException e) {	//+1	//+3
 					mensaje("ERROR", "No se pudo acceder a los datos");
 				}
 				break;
@@ -91,8 +91,8 @@ public class GestionComisiones {
 					vendedores = tienda.vendedores();
 					System.out.println(vendedores.size());
 					Collections.sort(vendedores, new Comparator<Vendedor>() {
-						public int compare(Vendedor o1, Vendedor o2) {
-							if (o1.getTotalVentas() > o2.getTotalVentas())	//+1	//+2
+						public int compare(Vendedor o1, Vendedor o2) { //+1
+							if (o1.getTotalVentas() > o2.getTotalVentas())	//+1	//+3
 								return -1;
 							else if (o1.getTotalVentas() < o2.getTotalVentas())	//+1	//+1
 								return 1;
@@ -100,11 +100,11 @@ public class GestionComisiones {
 						}
 					});
 					msj = "";
-					for (Vendedor vn : vendedores) {	//+1	//+2
+					for (Vendedor vn : vendedores) {	//+1	//+3
 						msj += vn.getNombre() + " (" + vn.getId()+ ") "+vn.getTotalVentas() + "\n";
 					}
 					mensaje("VENDEDORES", msj);
-				} catch (DataAccessException e) {	//+1	//+2
+				} catch (DataAccessException e) {	//+1	//+3
 					mensaje("ERROR", "No se pudo acceder a los datos");
 				}
 				break;
