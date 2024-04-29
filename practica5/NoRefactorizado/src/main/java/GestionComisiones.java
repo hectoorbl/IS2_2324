@@ -91,7 +91,7 @@ public class GestionComisiones {
 					vendedores = tienda.vendedores();
 					System.out.println(vendedores.size());
 					Collections.sort(vendedores, new Comparator<Vendedor>() {
-						public int compare(Vendedor o1, Vendedor o2) {
+						public int compare(Vendedor o1, Vendedor o2) { //+1
 							if (o1.getTotalVentas() > o2.getTotalVentas())	//+1	//+3
 								return -1;
 							else if (o1.getTotalVentas() < o2.getTotalVentas())	//+1	//+1
