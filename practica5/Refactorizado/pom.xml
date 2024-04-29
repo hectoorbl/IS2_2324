@@ -37,11 +37,10 @@
 				  
 			  	<archive>
 					  <manifest>
-<<<<<<< HEAD
+
 						  <mainClass>GestionComisiones</mainClass>
-=======
 						  <mainClass>es.unican.is2.practica1b.Main</mainClass>
->>>>>>> practica5
+
 					  </manifest> 
 				</archive>
 			 </configuration>
