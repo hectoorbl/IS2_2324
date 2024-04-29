@@ -18,7 +18,11 @@
 	  	<version>0.0.1-SNAPSHOT</version>
   	</dependency>
  </dependencies>
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> practica5
   <build>
 	  <plugins>
 		<plugin>
@@ -33,7 +37,11 @@
 				  
 			  	<archive>
 					  <manifest>
+<<<<<<< HEAD
 						  <mainClass>GestionComisiones</mainClass>
+=======
+						  <mainClass>es.unican.is2.practica1b.Main</mainClass>
+>>>>>>> practica5
 					  </manifest> 
 				</archive>
 			 </configuration>
