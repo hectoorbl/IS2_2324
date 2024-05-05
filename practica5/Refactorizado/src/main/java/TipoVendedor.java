@@ -5,5 +5,5 @@
  *
  */
 public enum TipoVendedor {
-	Junior, Senior
+	JUNIOR, SENIOR
 }
